@@ -17,17 +17,17 @@ public class LoginPage extends BaseClass {
 	@FindBy(name = "password")
 	WebElement Password;
 
-	@FindBy(xpath = "//*[text()='Login']")
+	@FindBy(xpath = "//*[@value='Login']")
 	WebElement Login_butn;
 
 	@FindBy(xpath = "//*[text()='Sign Up']")
 	WebElement Signup_btn;
 
-	@FindBy(xpath = "//*[text()='Forgot your password?']")
-	WebElement forgot_password;
+	/*@FindBy(xpath = "//*[text()='Forgot your password?']")
+	WebElement forgot_password;*/
 
 	// initializing the page object
-	public LoginPage(WebDriver driver) {
+	public LoginPage() {
 		PageFactory.initElements(driver, this); // this refers to current class object
 	}
 

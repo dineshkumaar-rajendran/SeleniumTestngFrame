@@ -21,21 +21,21 @@ public class LoginTest extends BaseClass {
 	@BeforeMethod
 	public void setup() {
 		initialize_driver();
-		login_page = new LoginPage(driver);
+		login_page = new LoginPage();
 
 	}
 
-	@Test(priority=1)
+	@Test(priority = 1)
 	public void login_page_Test() {
 		String actual = login_page.Validate_loginpage_title();
 		Assert.assertEquals(actual, "CRMPRO - CRM software for customer relationship management, sales, and support.");
 	}
 
-	@Test(priority=2)
+	@Test(priority = 2)
 	public void login_to_App() {
-		homepage =login_page.login(prop.getProperty("username"),prop.getProperty("password"));
-		String pagetitle= driver.getTitle();
-		Assert.assertEquals(pagetitle,"CRMPRO");
+		homepage = login_page.login(prop.getProperty("username"), prop.getProperty("password"));
+		String pagetitle = driver.getTitle();
+		Assert.assertEquals(pagetitle, "CRMPRO", "Login Page title not matched");
 	}
 
 	@AfterMethod
