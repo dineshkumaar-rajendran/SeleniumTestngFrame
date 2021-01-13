@@ -3,18 +3,9 @@
 <suite name="Failed suite [CRM PRO Application Test Automation Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="CRM PRO App Test Cases(failed)">
     <classes>
-      <class name="com.crm.qa.testcases.HomePageTest">
-        <methods>
-          <include name="VerifyHomePageTitle"/>
-          <include name="setup"/>
-          <include name="VerifyUserNameinTheHomePage"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.crm.qa.testcases.HomePageTest -->
       <class name="com.crm.qa.testcases.ContactsPageTest">
         <methods>
           <include name="selectAcontact"/>
-          <include name="verifyContactsLabel"/>
           <include name="setup"/>
           <include name="tearDown"/>
         </methods>

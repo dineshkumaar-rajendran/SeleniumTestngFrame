@@ -41,10 +41,7 @@ public class ContactsPageTest extends BaseClass {
 	
 	@Test
 	public void selectAcontact() {
-		contactpage.selectContactsByName("Vimala Raman");
-		contactpage.selectContactsByName("Roy Min");
-		contactpage.selectContactsByName("Ram Moorthy");
-		contactpage.selectContactsByName("Demo User");
+		contactpage.selectContactsByName("Dinesh Kumaran");
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
