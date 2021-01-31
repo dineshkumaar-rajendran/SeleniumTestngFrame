@@ -19,6 +19,13 @@ public class HomePage extends BaseClass {
 
 	@FindBy(xpath = "//a[contains(text(),'Tasks')]")
 	WebElement TasksLink;
+	
+	@FindBy(xpath = "(//a[@class='topnavlink'])[3]")
+	WebElement Logout_btn;
+
+	public void Logout() {
+		Logout_btn.click();
+	}
 
 	public HomePage() {
 		PageFactory.initElements(driver, this);

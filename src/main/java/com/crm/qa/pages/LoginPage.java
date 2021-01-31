@@ -25,6 +25,13 @@ public class LoginPage extends BaseClass {
 
 	/*@FindBy(xpath = "//*[text()='Forgot your password?']")
 	WebElement forgot_password;*/
+	
+	@FindBy(xpath = "(//a[@class='topnavlink'])[3]")
+	WebElement Logout_btn;
+
+	public void Logout() {
+		Logout_btn.click();
+	}
 
 	// initializing the page object
 	public LoginPage() {
