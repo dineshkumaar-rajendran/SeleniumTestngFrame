@@ -8,8 +8,11 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.crm.qa.util.TestUtil;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 
@@ -17,15 +20,15 @@ public class BaseClass {
 	public static Properties prop;
 
 	public BaseClass() {
-		 prop = new Properties();
+		prop = new Properties();
 		try {
 			FileInputStream fis = new FileInputStream("./src/main/java/com/crm/qa/config/config.properties");
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 	}
@@ -34,14 +37,17 @@ public class BaseClass {
 		String browserName = prop.getProperty("browser");
 
 		if (browserName.contains("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "./src/test/java/drivers/chromedriver.exe");
+
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		} else if (browserName.contains("firfox")) {
-			System.setProperty("webdriver.chrome.driver", "./src/test/java/drivers");
+
+		} else if (browserName.contains("firefox")) {
+			WebDriverManager.chromedriver().setup();
+			driver = new FirefoxDriver();
 		}
 
 		driver.manage().window().maximize();
-		//driver.manage().timeouts().pageLoadTimeout(TestUtil.page_load_timeout, TimeUnit.SECONDS);
+		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(TestUtil.implicit_wait, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
 

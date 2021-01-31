@@ -3,13 +3,14 @@
 <suite name="Failed suite [CRM PRO Application Test Automation Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="CRM PRO App Test Cases(failed)">
     <classes>
-      <class name="com.crm.qa.testcases.ContactsPageTest">
+      <class name="com.crm.qa.testcases.LoginTest">
         <methods>
-          <include name="selectAcontact"/>
+          <include name="login_page_Test"/>
           <include name="setup"/>
-          <include name="tearDown"/>
+          <include name="tear_down"/>
+          <include name="login_to_App"/>
         </methods>
-      </class> <!-- com.crm.qa.testcases.ContactsPageTest -->
+      </class> <!-- com.crm.qa.testcases.LoginTest -->
     </classes>
   </test> <!-- CRM PRO App Test Cases(failed) -->
 </suite> <!-- Failed suite [CRM PRO Application Test Automation Test Suite] -->

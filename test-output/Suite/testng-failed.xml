@@ -3,12 +3,29 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="com.crm.qa.testcases.ContactsPageTest">
+        <methods>
+          <include name="selectAcontact"/>
+          <include name="verifyContactsLabel"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.ContactsPageTest -->
+      <class name="com.crm.qa.testcases.HomePageTest">
+        <methods>
+          <include name="VerifyContactLinkTest"/>
+          <include name="VerifyHomePageTitle"/>
+          <include name="setup"/>
+          <include name="VerifyUserNameinTheHomePage"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.HomePageTest -->
       <class name="com.crm.qa.testcases.LoginTest">
         <methods>
           <include name="login_page_Test"/>
           <include name="setup"/>
           <include name="tear_down"/>
-          <include name="logintoApp"/>
+          <include name="login_to_App"/>
         </methods>
       </class> <!-- com.crm.qa.testcases.LoginTest -->
     </classes>
