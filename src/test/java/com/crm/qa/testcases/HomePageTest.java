@@ -52,6 +52,7 @@ public class HomePageTest extends BaseClass {
 
 	@AfterMethod
 	public void tearDown() {
+		homepage.Logout();
 		driver.quit();
 	}
 }

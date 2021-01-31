@@ -33,13 +33,14 @@ public class LoginTest extends BaseClass {
 
 	@Test(priority = 2)
 	public void login_to_App() {
-		homepage = login_page.login(prop.getProperty("username"), prop.getProperty("password"));
+		login_page.login(prop.getProperty("username"), prop.getProperty("password"));
 		String pagetitle = driver.getTitle();
 		Assert.assertEquals(pagetitle, "CRMPRO", "Login Page title not matched");
 	}
 
 	@AfterMethod
 	public void tear_down() {
+		login_page.Logout();
 		driver.quit();
 	}
 

@@ -41,7 +41,7 @@ public class ContactsPageTest extends BaseClass {
 	
 	@Test
 	public void selectAcontact() {
-		contactpage.selectContactsByName("Dinesh Kumaran");
+		contactpage.selectContactsByName("amit shah");
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
@@ -51,7 +51,10 @@ public class ContactsPageTest extends BaseClass {
 
 	@AfterMethod
 	public void tearDown() {
+		contactpage.Logout();
 		driver.quit();
 	}
+	
+	
 
 }
