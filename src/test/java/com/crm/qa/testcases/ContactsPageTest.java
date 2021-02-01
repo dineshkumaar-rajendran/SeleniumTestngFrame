@@ -51,7 +51,7 @@ public class ContactsPageTest extends BaseClass {
 
 	@AfterMethod
 	public void tearDown() {
-		contactpage.Logout();
+		//contactpage.Logout();
 		driver.quit();
 	}
 	

@@ -40,7 +40,7 @@ public class LoginTest extends BaseClass {
 
 	@AfterMethod
 	public void tear_down() {
-		login_page.Logout();
+		//login_page.Logout();
 		driver.quit();
 	}
 

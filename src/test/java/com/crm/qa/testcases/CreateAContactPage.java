@@ -67,7 +67,7 @@ public class CreateAContactPage extends BaseClass {
 
 	@AfterMethod
 	public void tearDown() {
-		createContact.Logout();
+		//createContact.Logout();
 		driver.quit();
 		
 	}
